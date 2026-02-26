@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - AutoJournal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #FE8C58;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FAF8F5;
+            min-height: 100vh;
+            color: #333333;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 40px 80px;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #000000;
+        }
+
+        .app-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 0.25rem;
+        }
+
+        .effective-date {
+            font-size: 0.875rem;
+            color: #777;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro {
+            margin-bottom: 2rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 2rem 0;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #444;
+        }
+
+        h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary);
+        }
+
+        .contact-email {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; Back to AutoJournal</a>
+
+        <h1>Privacy Policy</h1>
+        <p class="app-name">Developer: Pranav Ambwani</p>
+        <p class="effective-date">Last Updated: February 27, 2025</p>
+
+        <p class="intro">AutoJournal ("we," "our," or "the app") is privacy-first. Your photos never leave your device. All Vision analysis (scene classification, face detection) happens on-device. Only anonymized metadata is sent to generate journal narratives.</p>
+
+        <hr>
+
+        <h2>Information Stored on Your Device (Never Leaves)</h2>
+        <ul>
+            <li>All photos and thumbnails</li>
+            <li>Vision analysis results (scene labels, face counts)</li>
+            <li>GPS coordinates from photo EXIF data</li>
+            <li>Journal entries (narrative text, titles, captions)</li>
+            <li>Subscription status</li>
+            <li>All SwiftData persistence</li>
+        </ul>
+
+        <hr>
+
+        <h2>Information Shared with Third-Party Services</h2>
+
+        <h3>AI Narrative Generation (Anthropic Claude via Cloudflare Worker)</h3>
+        <ul>
+            <li><strong>What is sent:</strong> Day names, time-of-day labels (e.g., "morning," "around 2pm"), scene classification labels (e.g., "outdoor," "food"), neighborhood/city-level location names (e.g., "Mission District, San Francisco"), face counts, photo counts. This is assembled into a structured weekly summary.</li>
+            <li><strong>What is NOT sent:</strong> Photos, thumbnails, GPS coordinates, filenames, face recognition data, personal identifiers.</li>
+            <li><strong>How:</strong> Sent via HTTPS to a Cloudflare Worker proxy (<code>anthropic-proxy.arkanaventerprises.workers.dev</code>) which forwards to Anthropic's API. The Worker does not log or store user content.</li>
+            <li><strong>Anthropic API data policy:</strong> Data sent via API is not used to train models.</li>
+        </ul>
+
+        <h3>Analytics (PostHog)</h3>
+        <ul>
+            <li>Anonymous usage events (e.g., "scan completed," "entry viewed," "paywall shown"), feature engagement metrics, app performance.</li>
+            <li>PostHog assigns an anonymous device UUID. Not linked to name, email, or Apple ID.</li>
+            <li>No journal text, photo content, or personally identifiable information is collected.</li>
+        </ul>
+
+        <h3>Subscriptions (StoreKit 2 / Apple)</h3>
+        <ul>
+            <li>Subscription verification handled entirely via Apple's StoreKit 2 framework. No third-party subscription SDK. Apple manages purchase receipts and entitlements.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Information We Do NOT Collect</h2>
+        <ul>
+            <li>No accounts, no login, no name/email/contact info</li>
+            <li>No location data transmitted</li>
+            <li>No photo uploads</li>
+            <li>No data sold, rented, or traded</li>
+            <li>No advertising or ad targeting</li>
+        </ul>
+
+        <hr>
+
+        <h2>Data Security</h2>
+        <ul>
+            <li>All photo and journal data stored locally, protected by device passcode/Face ID/Touch ID</li>
+            <li>All network communication uses HTTPS</li>
+            <li>No database of user content maintained</li>
+        </ul>
+
+        <hr>
+
+        <h2>Children's Privacy</h2>
+        <p>AutoJournal is rated 4+ on the App Store. We do not knowingly collect personal information from children under 13. No personal information is collected from any user.</p>
+
+        <hr>
+
+        <h2>Your Rights</h2>
+        <ul>
+            <li><strong>Access and deletion:</strong> Delete entries in-app or delete the app to remove all local data.</li>
+            <li><strong>Analytics:</strong> Contact us to request deletion of anonymous analytics data associated with your device.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Third-Party Service Policies</h2>
+        <ul>
+            <li><strong>Anthropic:</strong> <a href="https://www.anthropic.com/policies/privacy">https://www.anthropic.com/policies/privacy</a></li>
+            <li><strong>PostHog:</strong> <a href="https://posthog.com/privacy">https://posthog.com/privacy</a></li>
+            <li><strong>Cloudflare:</strong> <a href="https://www.cloudflare.com/privacypolicy/">https://www.cloudflare.com/privacypolicy/</a></li>
+        </ul>
+
+        <hr>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last Updated" date above. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+
+        <hr>
+
+        <h2>Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or your data, contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:support@autojournal.app" class="contact-email">support@autojournal.app</a><br>
+        <strong>Website:</strong> <a href="https://autojournal.app">https://autojournal.app</a></p>
+    </div>
+</body>
+</html>

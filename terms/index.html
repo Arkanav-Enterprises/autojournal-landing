@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - AutoJournal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #FE8C58;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FAF8F5;
+            min-height: 100vh;
+            color: #333333;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 40px 80px;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #000000;
+        }
+
+        .effective-date {
+            font-size: 0.875rem;
+            color: #777;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro {
+            margin-bottom: 2rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 2rem 0;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary);
+        }
+
+        .contact-email {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; Back to AutoJournal</a>
+
+        <h1>Terms of Service</h1>
+        <p class="effective-date">Effective Date: February 27, 2025</p>
+
+        <p class="intro">Welcome to AutoJournal. By downloading or using our app, you agree to these Terms of Service. If you do not agree, please do not use the app.</p>
+
+        <hr>
+
+        <h2>Use of the App</h2>
+        <p>AutoJournal is an iOS app that automatically generates weekly journal entries from your photo library. Photos are analyzed entirely on-device using Apple's Vision framework. Only anonymized metadata (scene labels, neighborhood-level location names, face counts, time-of-day) is sent to an AI service to generate narrative text. An active subscription is required for full functionality beyond the free tier (4 entries). You agree not to misuse the app or attempt to circumvent its features.</p>
+
+        <hr>
+
+        <h2>No Account Required</h2>
+        <p>No login or account creation is required. All journal entries and photo data remain stored locally on your device via SwiftData.</p>
+
+        <hr>
+
+        <h2>Subscriptions &amp; Payments</h2>
+        <p>AutoJournal offers 4 free journal entries. A $9/month subscription unlocks unlimited entries. All payments are processed through the Apple App Store. Refunds are handled per Apple's refund policy.</p>
+
+        <hr>
+
+        <h2>Third-Party Services</h2>
+        <p>AutoJournal uses a Cloudflare Worker proxy to communicate with Anthropic's Claude API for narrative generation. No photos, GPS coordinates, filenames, or personal identifiers are sent. Only anonymized metadata leaves the device. PostHog is used for anonymous analytics.</p>
+
+        <hr>
+
+        <h2>Restrictions</h2>
+        <p>You agree not to:</p>
+        <ul>
+            <li>Use the app for any unlawful purpose</li>
+            <li>Attempt to reverse engineer or tamper with the app</li>
+            <li>Exploit bugs or vulnerabilities</li>
+            <li>Violate any applicable laws or regulations</li>
+        </ul>
+        <p>We reserve the right to restrict access for violations of these terms.</p>
+
+        <hr>
+
+        <h2>Age Requirement</h2>
+        <p>AutoJournal is rated 4+ and suitable for all ages. Parents and guardians are responsible for supervising minors' use of the app.</p>
+
+        <hr>
+
+        <h2>Disclaimer &amp; Limitation of Liability</h2>
+        <p>AutoJournal is provided "as is" without warranties of any kind. AI-generated journal entries are for personal reflection only and are not a substitute for professional advice. To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, or consequential damages arising from your use of the app.</p>
+
+        <hr>
+
+        <h2>Changes to Terms</h2>
+        <p>We reserve the right to modify these Terms at any time. Continued use of the app after changes constitutes acceptance of the updated Terms.</p>
+
+        <hr>
+
+        <h2>Contact</h2>
+        <p>For questions about these Terms, please contact us at <a href="mailto:support@autojournal.app" class="contact-email">support@autojournal.app</a></p>
+    </div>
+</body>
+</html>
