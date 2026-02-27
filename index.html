@@ -155,6 +155,23 @@
         transition: opacity 0.2s ease;
       }
 
+      .cta-button.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+        position: relative;
+        cursor: default;
+      }
+
+      .cta-button .coming-soon {
+        position: absolute;
+        bottom: -22px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.6);
+        white-space: nowrap;
+      }
+
       .cta-button:hover {
         opacity: 0.85;
       }
@@ -267,11 +284,12 @@
 
         <p class="subheadline">your photos write your diary</p>
 
-        <a class="cta-button" href="#" target="_blank" rel="noopener noreferrer">
+        <a class="cta-button disabled" aria-disabled="true">
           <img
             src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
             alt="Download on the App Store"
           />
+          <span class="coming-soon">Coming Soon</span>
         </a>
 
         <p class="tagline">open up and read your week.</p>
